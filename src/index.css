@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  Design tokens for the StudyCircle UI.
+  Every semantic color used across the components (bg-primary,
+  text-muted-foreground, bg-sidebar, border-border, ...) must be
+  defined here or Tailwind v4 will not generate the utility.
+*/
+@theme {
+  --color-background: #f7f6fb;
+  --color-foreground: #1d1b26;
+
+  --color-card: #ffffff;
+  --color-border: #e5e3ef;
+  --color-input: #d9d6e8;
+
+  --color-muted: #efedf6;
+  --color-muted-foreground: #6b6879;
+
+  --color-primary: #5b4fc4;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #ece9f8;
+  --color-secondary-foreground: #3f3a56;
+
+  --color-accent: #8b7ff5;
+  --color-accent-foreground: #2d2a45;
+
+  --color-success: #1a7f4e;
+  --color-danger: #d33d5e;
+
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #78350f;
+
+  --color-ring: #5b4fc4;
+
+  --color-sidebar: #211f2e;
+  --color-sidebar-foreground: #e8e6f2;
+  --color-sidebar-primary: #5b4fc4;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #343148;
+  --color-sidebar-accent-foreground: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family:
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode overrides — same token names, darker values. */
+.dark {
+  --color-background: #15141d;
+  --color-foreground: #edeaf6;
+
+  --color-card: #201e2b;
+  --color-border: #37344a;
+  --color-input: #4a4763;
+
+  --color-muted: #2a2738;
+  --color-muted-foreground: #a5a1b8;
+
+  --color-primary: #7b6ef2;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #2d2a3f;
+  --color-secondary-foreground: #d9d6ea;
+
+  --color-accent: #8b7ff5;
+  --color-accent-foreground: #f1eefe;
+
+  --color-success: #3ecf8e;
+  --color-danger: #f06a8a;
+
+  --color-warning: #f5a623;
+  --color-warning-foreground: #3b2506;
+
+  --color-ring: #8b7ff5;
+
+  --color-sidebar: #131219;
+  --color-sidebar-foreground: #e8e6f2;
+  --color-sidebar-primary: #7b6ef2;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #232130;
+  --color-sidebar-accent-foreground: #ffffff;
+}
