@@ -1,0 +1,44 @@
+.a11y-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  flex-wrap: wrap;
+}
+.a11y-toolbar button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #555;
+  cursor: pointer;
+}
+.a11y-toolbar button[aria-pressed="true"] {
+  background: #028090;
+  color: #fff;
+  border-color: #028090;
+}
+
+/* Dyslexic font: swap in a real OpenDyslexic @font-face if you add the font file */
+body.dyslexic-font, body.dyslexic-font * {
+  font-family: "Comic Sans MS", "OpenDyslexic", sans-serif !important;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+
+/* High contrast */
+body.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+body.high-contrast * {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+body.high-contrast a, body.high-contrast button {
+  color: #ffff00 !important;
+}
+
+/* Focus mode: dim everything except a .focus-content wrapper you add around lesson text */
+body.focus-mode .distraction {
+  opacity: 0.15;
+  pointer-events: none;
+}
